@@ -17,44 +17,68 @@ class MainActivity : AppCompatActivity() {
 
 
     fun setupEvents() {
-        dialBtn.setOnClickListener(){
+        dialBtn.setOnClickListener() {
 
 
-
-            val inputPhoneNumber=PhoneBtn.text.toString()
-
-            val myUri = Uri.parse("tel:01026816612")
-            val myIntent=Intent(Intent.ACTION_DIAL, myUri)
-            startActivity(myIntent)
-
-
-
-        }
-
-        callBtn.setOnClickListener(){
-
-
-            val inputPhoneNumber=PhoneBtn.text.toString()
+            val inputPhoneNumber = PhoneBtn.text.toString()
 
             val myUri = Uri.parse("tel:01026816612")
-            val myIntent=Intent(Intent.ACTION_CALL, myUri)
+            val myIntent = Intent(Intent.ACTION_DIAL, myUri)
             startActivity(myIntent)
 
 
         }
-        smsBtn.setOnClickListener(){
+
+        callBtn.setOnClickListener() {
 
 
-            val inputPhoneNumber=PhoneBtn.text.toString()
+            val inputPhoneNumber = PhoneBtn.text.toString()
+
+            val myUri = Uri.parse("tel:01026816612")
+            val myIntent = Intent(Intent.ACTION_CALL, myUri)
+            startActivity(myIntent)
+
+
+        }
+        smsBtn.setOnClickListener() {
+
+
+            val inputPhoneNumber = PhoneBtn.text.toString()
 
             val myUri = Uri.parse("smsto${inputPhoneNumber}")
-            val myIntent=Intent(Intent.ACTION_SENDTO, myUri)
+            val myIntent = Intent(Intent.ACTION_SENDTO, myUri)
             myIntent.putExtra("sms_body", "자동 입력 내용")
             startActivity(myIntent)
 
         }
 
+        naver.setOnClickListener() {
 
 
+            val inputPhoneNumber = PhoneBtn.text.toString()
+
+            val myUri = Uri.parse("http://naver.com")
+            val myIntent = Intent(Intent.ACTION_VIEW, myUri)
+            myIntent.putExtra("sms_body", "자동 입력 내용")
+            startActivity(myIntent)
+
+
+        }
+
+
+        kakao.setOnClickListener() {
+
+
+            val inputPhoneNumber = PhoneBtn.text.toString()
+
+            val myUri = Uri.parse("market://detail?id=com.Kakao.talk")
+            val myIntent = Intent(Intent.ACTION_VIEW, myUri)
+            myIntent.putExtra("sms_body", "자동 입력 내용")
+            startActivity(myIntent)
+
+        }
     }
 }
+
+
+
