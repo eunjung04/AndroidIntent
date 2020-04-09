@@ -17,7 +17,8 @@ class MainActivity : AppCompatActivity() {
 
 
     fun setupEvents() {
-        dialBtn.setONClickListener{
+        dialBtn.setOnClickListener(){
+
 
 
             val inputPhoneNumber=PhoneBtn.text.toString()
@@ -30,7 +31,17 @@ class MainActivity : AppCompatActivity() {
 
         }
 
+        callBtn.setOnClickListener(){
 
+
+            val inputPhoneNumber=PhoneBtn.text.toString()
+
+            val myUri = Uri.parse("tel:01026816612")
+            val myIntent=Intent(Intent.ACTION_CALL, myUri)
+            startActivity(myIntent)
+
+
+        }
 
     }
 }
