@@ -42,6 +42,19 @@ class MainActivity : AppCompatActivity() {
 
 
         }
+        smsBtn.setOnClickListener(){
+
+
+            val inputPhoneNumber=PhoneBtn.text.toString()
+
+            val myUri = Uri.parse("smsto${inputPhoneNumber}")
+            val myIntent=Intent(Intent.ACTION_SENDTO, myUri)
+            myIntent.putExtra("sms_body", "자동 입력 내용")
+            startActivity(myIntent)
+
+        }
+
+
 
     }
 }
