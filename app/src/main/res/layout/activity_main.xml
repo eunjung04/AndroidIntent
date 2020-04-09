@@ -9,7 +9,7 @@
     android:padding="15dp">
 
     <EditText
-        android:id="@+id/"
+        android:id="@+id/PhoneBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="phone"
@@ -34,7 +34,7 @@
             android:id="@+id/Btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="전화걸기"
+            android:text="전화걸기"/>
 
 
     </LinearLayout>
